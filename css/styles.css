@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+  font-family: "Helvetica";
+  src: url(../fonts/Helvetica.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  user-select: none;
+}
+
+.calculator {
+  width: min-content;
+  background-color: hsl(0, 0%, 11%);
+  padding: 24px 24px;
+  border-radius: 10px;
+  margin: 50px 0px;
+}
+
+.calculator .display #output {
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 16px;
+  background-color: hsl(60, 2%, 83%);
+  border: none;
+  border-radius: 10px;
+  font-family: "Helvetica", sans-serif;
+  font-weight: 500;
+  font-size: 4rem;
+  text-align: end;
+}
+
+.calculator .display #output {
+  outline-offset: unset;
+}
+
+.calculator .control-keys .operator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.calculator .control-keys .operator-keys button {
+  width: 80px;
+  height: 80px;
+  font-size: 1.85rem;
+  font-weight: 400;
+  font-family: "Helvetica", sans-serif;
+  color: hsl(0, 0%, 100%);
+  border: none;
+  cursor: pointer;
+  background-color: hsl(35, 100%, 50%);
+  border-radius: 50%;
+  transition: all 175ms ease-in-out;
+}
+
+.calculator .control-keys .operator-keys .operator-button:hover {
+  background-color: hsl(35, 100%, 60%);
+}
+
+.calculator .control-keys .operator-keys .operator-button:active {
+  background-color: hsl(35, 100%, 75%);
+}
+
+.calculator .control-keys .other-keys {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 16px;
+}
+
+.calculator .control-keys .other-keys button {
+  width: 80px;
+  height: 80px;
+  font-size: 1.85rem;
+  font-weight: 400;
+  font-family: "Helvetica", sans-serif;
+  color: hsl(0, 0%, 100%);
+  border: none;
+  cursor: pointer;
+  background-color: hsl(0, 0%, 31%);
+  border-radius: 50%;
+  transition: all 175ms ease-in-out;
+}
+
+.calculator .control-keys .other-keys button:hover {
+  background-color: hsl(0, 0%, 40%);
+}
+
+.calculator .control-keys .other-keys button:active {
+  background-color: hsl(0, 0%, 50%);
+}
+
+.calculator .control-keys .other-keys .number-keys {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.calculator .control-keys .other-keys .number-keys .zero-button {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 100% !important;
+  border-radius: 50px;
+}
+
+.calculator .control-keys .other-keys .primary-keys {
+  display: grid;
+  grid-template-rows: 3;
+  gap: 16px;
+}
+
+.calculator .control-keys .other-keys .primary-keys button {
+  background-color: hsl(35, 100%, 50%);
+}
+
+.calculator .control-keys .other-keys .primary-keys button:hover {
+  background-color: hsl(35, 100%, 60%);
+}
+
+.calculator .control-keys .other-keys .primary-keys button:active {
+  background-color: hsl(35, 100%, 75%);
+}
+
+.calculator .control-keys .other-keys .primary-keys #clearButton {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  height: auto !important;
+  border-radius: 16px;
+}
+
+.calculator .control-keys .other-keys .primary-keys #calculateButton {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  height: auto !important;
+  border-radius: 16px;
+}
+
+@media only screen and (max-width: 992px) {
+  .calculator .display #output {
+    padding: 10px 12px;
+    font-weight: 400;
+    font-size: 3rem;
+    text-align: end;
+  }
+
+  .calculator .control-keys .operator-keys button {
+    width: 62px;
+    height: 62px;
+    font-size: 1.5rem;
+  }
+
+  .calculator .control-keys .other-keys button {
+    width: 62px;
+    height: 62px;
+    font-size: 1.5rem;
+  }
+}

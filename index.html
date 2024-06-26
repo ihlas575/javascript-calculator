@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Calculator - By Ihlas</title>
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <!-- Calculator -->
+    <div class="calculator">
+        <!-- Calculator Display (Output Goes Here!) -->
+        <div class="display">
+            <input type="text" readonly="true" id="output">
+        </div>
+
+        <!-- Control Keys -->
+        <div class="control-keys">
+            <div class="operator-keys">
+                <button onclick="appendToDisplay('+')" class="operator-button">+</button>
+                <button onclick="appendToDisplay('-')" class="operator-button">-</button>
+                <button onclick="appendToDisplay('*')" class="operator-button">*</button>
+                <button onclick="appendToDisplay('/')" class="operator-button">/</button>
+            </div>
+
+            <div class="other-keys">
+                <div class="number-keys">
+                    <button onclick="appendToDisplay('7')">7</button>
+                    <button onclick="appendToDisplay('8')">8</button>
+                    <button onclick="appendToDisplay('9')">9</button>
+
+                    <button onclick="appendToDisplay('4')">4</button>
+                    <button onclick="appendToDisplay('5')">5</button>
+                    <button onclick="appendToDisplay('6')">6</button>
+
+
+                    <button onclick="appendToDisplay('1')">1</button>
+                    <button onclick="appendToDisplay('2')">2</button>
+                    <button onclick="appendToDisplay('3')">3</button>
+
+                    <button onclick="appendToDisplay('0')" class="zero-button">0</button>
+                    <button onclick="appendToDisplay('.')">.</button>
+                </div>
+
+                <div class="primary-keys">
+                    <button onclick="clearDisplay()" id="clearButton">C</button>
+                    <button onclick="calculate()" id="calculateButton">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Script Files -->
+    <script src="/js/custom.js"></script>
+</body>
+
+</html>
